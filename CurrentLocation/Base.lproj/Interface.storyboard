@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="CurrentLocation" customModuleProvider="target">
+                    <items>
+                        <map height="72" alignment="left" id="drg-Mm-QFm"/>
+                        <button width="133" height="25" alignment="left" title="Get Current Location" id="0jL-K2-Ng5">
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                            <connections>
+                                <action selector="btnGetCurrentLocationClicked" destination="AgC-eL-Hgc" id="BfP-Xi-gns"/>
+                            </connections>
+                        </button>
+                        <label width="134" height="19" alignment="left" text="Latitude" id="6ou-5E-haf"/>
+                        <label width="132" alignment="left" text="Longitude" id="kH7-Yi-g18"/>
+                    </items>
+                    <connections>
+                        <outlet property="lblLatitude" destination="6ou-5E-haf" id="OcM-8o-HF4"/>
+                        <outlet property="lbllongitude" destination="kH7-Yi-g18" id="wXK-ag-1QN"/>
+                        <outlet property="mapView" destination="drg-Mm-QFm" id="N1e-cM-rCv"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+    </scenes>
+</document>
